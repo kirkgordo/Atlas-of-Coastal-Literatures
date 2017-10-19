@@ -1,0 +1,87 @@
+/* This is a comment
+ This is the second line.
+
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar {
+	display: inline-block;
+	width: 30%;
+
+}
+
+/* Title styles */
+.header, .infobar {
+  padding: 10;
+  position: relative;
+  left: 0px;
+  z-index: 2;
+	padding-left: 20;
+}
+
+.header {
+	background-color: magenta;
+	height: 100px;  /* need a static height here so we can subtract it from infobar height */
+}
+
+.infobar {
+	background-color: #000000;
+	overflow-y: auto; /* adds a vertical scrollbar (only if needed), so any text that is taller than the container will scroll instead of overflowing */
+	height: calc(100vh - 100px - 40px); /* height of map container (100vh) - height of header (100px) - 4*header/infobar padding (4*10px)...change these values as needed */
+}
+
+#pagetitle, #info {
+	font-family: Helvetica, Arial, sans-serif;
+	color: white;
+}
+
+#pagetitle {
+	color: black;
+	font-size: 32px;
+	font-weight: bold;
+  text-align: left;
+  opacity: 1;
+}
+
+#map-container {
+	width:70%;
+	float: right;
+	height: 100vh;
+}
+
+#map {
+  display: inline-block;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.leaflet-popup-content { min-width: 400px !important; }
+.popup-body { height: auto; }
+
+.popup-right, .popup-left {
+    vertical-align: top;	/* This makes sure that the content in the left and right columns is vertically aligned at the top edge */
+}
+
+.popup-left {
+	width: 120px;
+	margin-right: 20px;
+}
+
+.popup-right {
+	width: 250px;
+	margin-top: 0px;
+}
+
+.popup-left, .popup-right { display: inline-block; }
+
+.booktitle { margin-top: 0; }
+
+.bookcover img {
+	width: 100%;
+	height: auto;
+}
